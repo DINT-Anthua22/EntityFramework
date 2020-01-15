@@ -54,7 +54,7 @@ namespace EntityFramework
                 ContenedorStackPanel.DataContext = cliente_plantilla;
             }catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }
@@ -68,8 +68,9 @@ namespace EntityFramework
                     contexto.CLIENTES.Remove((CLIENTE)UsuariosCombox.SelectedItem);
                     contexto.SaveChanges();
                 }
-               
+
             }
+         
             
         }
 
